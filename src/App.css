@@ -1,38 +1,104 @@
 .App {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+.pointer{
+  cursor: pointer ;
+  color: white !important;
+}
+.pointer:hover{
+  color: red !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-dark-theme{
+  background-color: #102439;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bg-blue-theme{
+  background-color: #234e7b !important;
+}
+.header-icon{
+  font-size: 24px;
+}
+.intro{
+  background:url("../src/assets/images/introBg.jpg"),linear-gradient(to right, rgba(68, 67, 67, 0.5),rgb(54, 53, 53)) ;
+  background-blend-mode: overlay;
+  min-height: 60vh;
+  background-size: cover;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  animation: zoomOut 3s ease-in-out;
+  text-align: center;
+  font-weight: 600;
+}
+@keyframes zoomOut {
+  from{
+    background-size: 120%;
+  }
+  to{
+    background-size: 100%;
   }
 }
+.border-theme{
+  border-bottom:  1px solid white;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dot{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: aliceblue;
+}
+.card-top{
+  border: 8px solid white;
+ 
+}
+.card-img {
+  overflow: hidden;
+  
+}
+.card-img > img{
+  transition:  .1s ease-out;
+  transform-origin: center top;
+}
+.card-img > img:hover{
+transform: scale(1.6);
+}
+.cat-img{
+  object-fit: cover;
+  border: 0;
+}
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left:0;
+  background: linear-gradient(to right, rgba(68, 67, 67, 0.308),rgba(54, 53, 53, 0.432));
+  border: 0;
+}
+.right-box{
+  border-left: 1px solid white;
+}
+#newsletter input{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+ input::placeholder{
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.off-canvas-bs{
+  width: 50% !important;
+  border-left: .7px solid white !important;
+  font-family: 'Roboto Mono', monospace;
+}
+.btn-close {
+  color: #fff !important; 
+  background-color: white !important;
+  opacity: 1 !important;
 }
