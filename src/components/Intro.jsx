@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import bg from "../assets/images/introBg.jpg"
 
 
 

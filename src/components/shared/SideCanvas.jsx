@@ -1,6 +1,7 @@
 import { Offcanvas } from 'react-bootstrap';
 import React, { Component } from 'react';
 import Threedots from './ThreeDots';
+import { Link } from 'react-router-dom';
 
 class SideCanvas extends Component {
     render() {
@@ -8,7 +9,7 @@ class SideCanvas extends Component {
             <>
                 {
                     this.props.component === "login" ?
-                        <Offcanvas className="bg-blue-theme off-canvas-bs text-white" placement='end' show={this.props.show} onHide={this.props.handleClose}>
+                        <Offcanvas className="bg-dark-theme off-canvas-bs text-white" placement='end' show={this.props.show} onHide={this.props.handleClose}>
 
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title className='fs-2 text-uppercase'>Login</Offcanvas.Title>
@@ -19,13 +20,13 @@ class SideCanvas extends Component {
                                     <input className='text-white w-100 my-2 p-2 border-bottom bg-transparent border-0' type="email" placeholder='Email' />
                                     <input className='text-white w-100 my-2 p-2 border-bottom bg-transparent border-0' type="password" placeholder="Password" />
                                     <button className='w-100 p-2 btn btn-light border-0 my-2'>SIGN IN</button>
-                                    <p className='text-center'>Create Account</p>
+                                    <Link className='text-decoration-none ' to="/register"><p className='text-center'>Create Account</p></Link>
                                     <p className='text-center'>Forgot Your Password?</p>
                                 </div>
                             </Offcanvas.Body>
                         </Offcanvas>
                         :
-                        <Offcanvas className="bg-blue-theme off-canvas-bs text-white" placement='end' show={this.props.show} onHide={this.props.handleClose}>
+                        <Offcanvas className="bg-dark-theme off-canvas-bs text-white" placement='end' show={this.props.show} onHide={this.props.handleClose}>
 
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title className='fs-2 text-uppercase'>Search For Products on Our Site</Offcanvas.Title>

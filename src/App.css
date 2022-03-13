@@ -6,12 +6,9 @@
   cursor: pointer ;
   color: white !important;
 }
-.pointer:hover{
-  color: red !important;
-}
 
 .bg-dark-theme{
-  background-color: #102439;
+  background-color: #102439 !important;
 }
 .bg-blue-theme{
   background-color: #234e7b !important;
@@ -49,18 +46,15 @@
   width: 7px;
   border-radius: 50%;
   margin: 0 10px;
-  background-color: aliceblue;
+  background-color: #fff;
 }
-.card-top{
-  border: 8px solid white;
- 
-}
+
 .card-img {
   overflow: hidden;
   
 }
 .card-img > img{
-  transition:  .1s ease-out;
+  transition:  1s ease-out;
   transform-origin: center top;
 }
 .card-img > img:hover{
@@ -69,6 +63,7 @@ transform: scale(1.6);
 .cat-img{
   object-fit: cover;
   border: 0;
+  transition: all 1s ease-in-out;
 }
 .overlay{
   position: absolute;
@@ -101,4 +96,31 @@ transform: scale(1.6);
   color: #fff !important; 
   background-color: white !important;
   opacity: 1 !important;
+}
+.bg-aliceblue{
+  background-color: rgb(169, 207, 226);
+}
+.bg-light-theme{
+  background-color: rgba(3, 87, 73, 0.644);
+}
+.cover{
+  object-fit: cover;
+  background-position: center;
+}
+.hover{
+  cursor: pointer;
+}
+.hover:hover > .cat-img{
+  transform: scale(1.2);
+}
+.form-container{
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+@media screen and (max-width:480px) {
+  .form-container{
+    width: 85%;
+  }
 }

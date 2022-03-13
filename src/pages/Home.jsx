@@ -5,9 +5,7 @@ import DeliverySteps from '../components/DeliverySteps';
 import Intro from '../components/Intro';
 import Mysterybox from '../components/MysteryBox';
 import Newarrivals from '../components/NewArrivals';
-import Newsletter from '../components/NewsLetter';
 import Offer from '../components/Offer';
-import Reviews from '../components/Reviews';
 import Footer from '../components/shared/Footer';
 import Header from '../components/shared/Header';
 
@@ -19,12 +17,10 @@ class Home extends Component {
                 <Header />
                 <Intro />
                 <Mysterybox />
-                <Newarrivals />
                 <CategoriesSection />
+                <Newarrivals />
                 <DeliveryFee />
                 <DeliverySteps />
-                <Reviews />
-                <Newsletter />
                 <Footer />
             </div>
         );

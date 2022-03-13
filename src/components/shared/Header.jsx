@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Badge, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import SideCanvas from './SideCanvas';
 
 
@@ -38,7 +39,7 @@ class Header extends Component {
                     expand="lg"
                     variant="dark"
                 >
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand><Link to="/" className='text-decoration-none text-white fw-bold fs-2'>Candy<span className='text-danger'>Shop</span></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
@@ -61,7 +62,7 @@ class Header extends Component {
                 <div className='bg-dark-theme my-2'  >
                     <div className='d-flex justify-content-end align-items-center '>
                         <button
-                            className='btn btn-warning px-3 pointer rounded'
+                            className='btn btn-info px-3 pointer rounded'
                             onClick={() => this.handleShow("search")}
                         >
                             <i className="bi bi-search"></i> Search
@@ -70,11 +71,15 @@ class Header extends Component {
                             className='px-3 pointer'>
                             <i className="bi bi-person-fill header-icon"></i> Account
                         </div>
-                        <div
-                            className='px-2 pointer'
-                        >
-                            <i className="bi bi-cart header-icon"></i> cart
-                        </div>
+                        <Link to="/cart" className='text-decoration-none text-white'>
+                            <div
+                                className='px-2 pointer'
+                            >
+                                <span className=' d-flex align-items-center'>
+                                    <i className="bi bi-cart header-icon fs-3"></i><Badge bg="info">{6}</Badge>
+                                </span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
